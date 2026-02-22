@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RailGuard – Funkce</title>
+<!-- isti CSS kao u funkcije.html -->
+<style>
+:root{
+  --bg:#0c0f14;
+  --panel:#141a24;
+  --text:#e9eef7;
+  --muted:#9aa4b2;
+  --accent:#e63946;
+  --border:#222a38;
+  --line:#223047;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--text)}
+a{color:inherit;text-decoration:none}
+
+.topbar{
+  max-width:1100px;margin:0 auto;padding:18px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.brand{font-weight:800;letter-spacing:.4px}
+.nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--muted);font-size:13px}
+
+.langs{display:flex;gap:6px}
+.lang{
+  font-size:12px;padding:6px 10px;border-radius:8px;
+  border:1px solid #2a3140;color:#9aa4b2;transition:.2s
+}
+.lang:hover{background:#1b2230;color:#fff}
+.lang.active{background:var(--accent);border-color:var(--accent);color:#fff}
+
+.container{max-width:1100px;margin:0 auto;padding:32px 20px}
+h1{font-size:36px;margin:0 0 10px}
+.subtitle{color:var(--muted);max-width:760px;margin:0 0 40px}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.card h3{margin:0 0 8px;font-size:18px}
+.card p{margin:0 0 16px;color:var(--muted);font-size:14px}
+.phone{width:100%;height:auto;border-radius:14px;border:1px solid #2a3550;display:block}
+
+/* CTA */
+.cta{
+  margin-top:50px;
+  background:linear-gradient(180deg,#141a24,#0e131d);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+.cta h2{margin:0}
+.cta p{margin:6px 0 0;color:var(--muted)}
+.button{background:var(--accent);color:#fff;padding:14px 20px;border-radius:12px;font-weight:600}
+
+/* RESPONSIVE */
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}h1{font-size:30px}}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="nav">
+      <a class="brand" href="index_cz.html">RailGuard</a>
+      <span class="pill">Funkce</span>
+    </div>
+    <div class="langs">
+      <a class="lang" href="funkcije.html">SR</a>
+      <a class="lang active" href="funkcije_cz.html">CZ</a>
+      <a class="lang" href="funkcije_en.html">EN</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Jaké funkce nabízí RailGuard?</h1>
+    <p class="subtitle">
+      Aplikace, která upozorňuje na možný příjezd vlaku pomocí GPS,
+      databáze přejezdů a jízdních řádů — i když není závora nebo signál.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <div>
+          <h3>RailGuard aktivní</h3>
+          <p>Běží na pozadí a hlídá přejezdy.</p>
+        </div>
+        <img class="phone" src="images/railguard/feature_notif.png" alt="RailGuard aktivní">
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Upozornění na železniční přejezd</h3>
+          <p>Alarm při přiblížení (&lt; 500 m).</p>
+        </div>
+        <img class="phone" src="images/railguard/feature_map_alarm.png" alt="Upozornění na přejezd">
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Riziková zóna</h3>
+          <p>Mapa zvýrazní ohroženou oblast.</p>
+        </div>
+        <img class="phone" src="images/railguard/feature_risk_zone.png" alt="Riziková zóna">
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Vlak v okolí</h3>
+          <p>Indikátor rizika / vlaků (dle dat).</p>
+        </div>
+        <img class="phone" src="images/railguard/feature_loko_signal.png" alt="Vlak v okolí">
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Offline režim</h3>
+          <p>Funguje i bez internetu.</p>
+        </div>
+        <img class="phone" src="images/railguard/feature_offline.png" alt="Offline režim">
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Jednoduché ovládání</h3>
+          <p>Start/Stop s minimem rušení.</p>
+        </div>
+        <img class="phone" src="images/railguard/feature_controls.png" alt="Ovládání">
+      </div>
+    </div>
+
+    <div class="cta">
+      <div>
+        <h2>RailGuard je ve vývoji</h2>
+        <p>Hledáme beta testery a technickou spolupráci.</p>
+      </div>
+      <a class="button" href="mailto:marjan.posao@gmail.com">Kontakt</a>
+    </div>
+  </div>
+</body>
+</html>

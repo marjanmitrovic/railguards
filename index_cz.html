@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RailGuard — Bezpečnost na železničních přejezdech</title>
+  <meta name="description" content="RailGuard je Android aplikace pro včasné varování před příjezdem vlaku a rizikem na železničních přejezdech."/>
+
+  <meta property="og:title" content="RailGuard — Bezpečnost na železničních přejezdech">
+  <meta property="og:description" content="GPS + alarm + offline režim. Včasné varování před železničním přejezdem.">
+  <meta property="og:image" content="https://TVOJ-DOMEN/images/railguard/link_1200x628.png">
+  <meta property="og:type" content="website">
+
+  <style>
+     :root{
+      --bg:#0e1116;
+      --panel:#151a22;
+      --text:#e8ebf0;
+      --muted:#9aa4b2;
+      --accent:#e63946;
+      --accent-2:#457b9d;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif;
+      background:linear-gradient(180deg,#0e1116 0%, #0b0e13 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:18px 0;
+    }
+    .logo{font-weight:700;letter-spacing:.5px}
+    .badge{
+      border:1px solid #2a3140;border-radius:999px;
+      padding:6px 12px;color:var(--muted);font-size:13px;
+    }
+    .hero{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:32px;
+      padding:48px 0 24px;
+    }
+    .hero h1{font-size:42px;line-height:1.15;margin:0 0 12px}
+    .hero p{color:var(--muted);max-width:520px}
+    .cta{display:flex;gap:14px;margin-top:24px}
+    .btn{
+      padding:14px 18px;border-radius:10px;font-weight:600;
+      border:1px solid transparent;cursor:pointer
+    }
+    .btn-primary{background:var(--accent);color:white}
+    .btn-secondary{background:transparent;border-color:#2a3140;color:var(--text)}
+    .mock{
+      background:radial-gradient(120% 120% at 10% 10%, #1b2230 0%, #0f1420 60%);
+      border:1px solid #232a38;border-radius:18px;
+      min-height:320px;display:flex;align-items:center;justify-content:center;
+      overflow:hidden;
+    }
+    .mock img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:18px;
+    }
+    section{padding:48px 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{
+      background:var(--panel);border:1px solid #232a38;border-radius:16px;
+      padding:22px
+    }
+    .card h3{margin-top:0}
+    .muted{color:var(--muted)}
+    .features{grid-template-columns:repeat(4,1fr)}
+    footer{border-top:1px solid #232a38;margin-top:48px}
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .features{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:520px){
+      .features,.grid-3{grid-template-columns:1fr}
+      .hero h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="logo">RailGuard</div>
+  <div class="badge">Android · Bezpečnostní aplikace</div>
+ <div>
+    <a href="index.html" class="lang active">SR</a>
+    <a href="index_cz.html" class="lang">CZ</a>
+    <a href="index_en.html" class="lang">EN</a>
+  </div>
+<a href="funkcije_cz.html">Funkce</a>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>Včasné varování<br/>před nebezpečím na železničních přejezdech</h1>
+    <p>
+      RailGuard využívá GPS, mapu a jízdní řády,
+      aby včas upozornil řidiče na možný příjezd vlaku —
+      i bez přímého API.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#kontakt">Testovat aplikaci</a>
+      <a class="btn btn-secondary" href="#kako-radi">Jak to funguje</a>
+    </div>
+  </div>
+
+  <div class="mock">
+    <img src="images/railguard/mockup_alarm1.png">
+  </div>
+</div>
+
+<section id="kako-radi">
+  <h2>Jak to funguje</h2>
+  <div class="grid-3">
+    <div class="card">
+      <h3>1. Sledování pohybu</h3>
+      <p class="muted">Aplikace sleduje směr jízdy v reálném čase.</p>
+    </div>
+    <div class="card">
+      <h3>2. Analýza rizika</h3>
+      <p class="muted">GTFS / NetEx data hodnotí pravděpodobnost průjezdu vlaku.</p>
+    </div>
+    <div class="card">
+      <h3>3. Alarm</h3>
+      <p class="muted">Zvukové i vizuální varování před přejezdem.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="card">
+    <h2>Máte zájem o beta test nebo spolupráci?</h2>
+    <p class="muted">RailGuard je ve vývoji. Kontaktujte nás.</p>
+    <a class="btn btn-primary" href="mailto:marjan.posao@gmail.com">Kontakt</a>
+  </div>
+</section>
+
+<footer class="container muted">
+© 2026 RailGuard · Bezpečnost především
+</footer>
+
+</div>
+</body>
+</html>

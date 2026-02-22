@@ -1,0 +1,100 @@
+<!-- fb.html -->
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RailGuard</title>
+  <meta name="description" content="RailGuard — rano upozorenje na rizik na pružnim prelazima." />
+  <style>
+    :root{--bg:#0b0f14;--panel:#111824;--text:#eaf0ff;--muted:#a8b3c7;--accent:#e63946;--line:#223047;}
+    *{box-sizing:border-box;} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:980px;margin:0 auto;padding:22px}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0 18px}
+    .brand{font-weight:800;letter-spacing:.4px}
+    .pill{border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--muted);font-size:13px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+    .card{background:linear-gradient(180deg,#111824 0%, #0f1520 100%);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+    .img{
+      /* aspect-ratio:16/10; */
+      background:#0e1420;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#7f93b8;
+      background-image: radial-gradient(120% 120% at 10% 10%, #1c2a44 0%, #0f1520 55%);
+      padding:0;
+      overflow:hidden;
+    }
+    .img img{width:100%;height:100%;object-fit:cover;display:block;}
+    .pad{padding:18px}
+    h1{margin:0 0 10px;font-size:38px;line-height:1.12}
+    p{margin:0;color:var(--muted);line-height:1.6}
+    .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;font-weight:700;border:1px solid transparent}
+    .btn.primary{background:var(--accent);color:#fff}
+    .btn.ghost{border-color:var(--line);color:var(--text);background:transparent}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    .mini{border:1px solid var(--line);border-radius:14px;padding:14px;background:rgba(255,255,255,.02)}
+    .mini b{display:block;margin-bottom:6px}
+    footer{margin-top:22px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:14px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr} h1{font-size:32px} .grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">RailGuard</div>
+      <div class="pill">Bezbednost · Pružni prelazi</div>
+    </div>
+
+    <div class="hero">
+      <div class="card">
+        <div class="img">
+          <img src="images/railguard/hero_1080.png" alt="RailGuard screenshot">
+        </div>
+        <div class="pad">
+          <h1>Rano upozorenje pre pružnog prelaza</h1>
+          <p>Praćenje kretanja + analiza rizika + alarm. Dizajnirano da radi i u slabom signalu.</p>
+          <div class="btns">
+            <a class="btn primary" href="#preuzmi">Preuzmi / Beta</a>
+            <a class="btn ghost" href="#kako">Kako radi</a>
+          </div>
+          <div class="grid">
+            <div class="mini"><b>GPS režim</b><span style="color:var(--muted)">alarm na &lt;500 m</span></div>
+            <div class="mini"><b>GTFS/NetEx</b><span style="color:var(--muted)">procena nailaska voza</span></div>
+            <div class="mini"><b>Offline</b><span style="color:var(--muted)">prelazi iz baze</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="pad">
+          <h2 style="margin:0 0 10px;font-size:20px">Za koga je RailGuard?</h2>
+          <p>Vozači, dostavljači, radnici u smenama i svi koji često prolaze kroz prelaze bez rampe.</p>
+          <div style="height:12px"></div>
+          <div class="mini">
+            <b>Status</b>
+            <span style="color:var(--muted)">Android prototip · CZ/DE/RS dataset (postepeno)</span>
+          </div>
+          <div style="height:12px"></div>
+          <div class="mini" id="preuzmi">
+            <b>Kontakt</b>
+            <span style="color:var(--muted)">Beta test / saradnja</span><br/>
+            <a class="btn primary" style="margin-top:10px" href="mailto:marjan.posao@gmail.com">Pošalji poruku</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="kako" style="margin-top:18px">
+      <div class="pad">
+        <h2 style="margin:0 0 10px;font-size:20px">Kako radi</h2>
+        <p>1) GPS i pravac kretanja → 2) procena rizika (baza prelaza + vozni red) → 3) zvučno/vizuelno upozorenje.</p>
+      </div>
+    </div>
+
+    <footer>© 2026 RailGuard</footer>
+  </div>
+</body>
+</html>
